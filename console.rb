@@ -1,3 +1,4 @@
+require_relative('models/cinema')
 require_relative('models/customer')
 require_relative('models/film')
 require_relative('models/ticket')
@@ -7,6 +8,12 @@ require('pry-byebug')
 Ticket.delete_all()
 Film.delete_all()
 Customer.delete_all()
+Cinema.delete_all()
+
+cinema1 = Cinema.new({'cinema_chain' => 'CodeClan', 'location' => 'Edinburgh', 'capacity' => 50 })
+cinema1.save()
+cinema2 = Cinema.new({'cinema_chain' => 'CodeClan', 'location' => 'Glasgow', 'capacity' => 25 })
+cinema2.save()
 
 customer1 = Customer.new({'name' => 'Alex', 'funds' => 25.00})
 customer1.save()

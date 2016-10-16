@@ -1,6 +1,14 @@
 DROP TABLE tickets;
 DROP TABLE films;
 DROP TABLE customers;
+DROP TABLE cinemas;
+
+CREATE TABLE cinemas (
+  id SERIAL4 PRIMARY KEY,
+  cinema_chain VARCHAR(255),
+  location VARCHAR(255),
+  capacity INTEGER
+);
 
 CREATE TABLE customers (
   id SERIAL4 PRIMARY KEY,
